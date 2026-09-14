@@ -4,3 +4,7 @@ out
 next-env.d.ts
 *.tsbuildinfo
 .env*.local
+
+# Local screenshots for client outreach
+current site image/ScreenShoot/
+*.pdf

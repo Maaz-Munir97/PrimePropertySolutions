@@ -63,11 +63,8 @@ export default function QuoteForm() {
 
   return (
     <div className="relative overflow-hidden rounded-[2rem] bg-paper p-6 shadow-[0_40px_120px_-40px_rgba(12,13,15,0.3)] sm:p-10">
-      <div className="mb-8 flex items-center justify-between gap-4 border-b border-night/10 pb-6">
+      <div className="mb-8 border-b border-night/10 pb-6">
         <h3 className="font-display text-3xl sm:text-4xl">Request your quote</h3>
-        <span className="hidden rounded-full bg-clay/15 px-3 py-1 text-xs font-semibold text-clay-deep sm:inline">
-          Reply within 1 business day
-        </span>
       </div>
 
       <AnimatePresence mode="wait">
