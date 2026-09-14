@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   "Charcoal & Clay" — the brand's monochrome logo on deep charcoal,
+   warm bone neutrals and a painterly terracotta accent.
+------------------------------------------------------------------- */
+@theme {
+  --color-night: #0c0d0f;
+  --color-coal: #15171a;
+  --color-graphite: #22252a;
+  --color-bone: #f3efe9;
+  --color-paper: #faf8f5;
+  --color-sand: #e5dcd0;
+  --color-mute: #6a655e;
+  --color-clay: #c8723f;
+  --color-clay-soft: #eaa981;
+  --color-clay-deep: #a2522a;
+
+  --font-display: var(--font-instrument), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 38s linear infinite;
+  --animate-spin-slow: spin-slow 16s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes marquee-reverse {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-night font-sans text-night;
+  }
+
+  ::selection {
+    @apply bg-clay text-night;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-clay;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[88rem] px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[0.7rem] font-semibold tracking-[0.24em] uppercase;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply size-1.5 shrink-0 rounded-full bg-clay;
+  }
+
+  /* Faint vertical rules used behind dark hero sections */
+  .bg-lines {
+    background-image: linear-gradient(to right, rgb(243 239 233 / 0.06) 1px, transparent 1px);
+    background-size: calc(100% / 6) 100%;
+    mask-image: linear-gradient(to bottom, black 10%, transparent 90%);
+  }
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* If the intro never finishes (JavaScript blocked or failed), fade it out anyway.
+   The normal intro removes the element well before this delay. */
+@keyframes preloader-failsafe {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.preloader-failsafe {
+  animation: preloader-failsafe 0.5s ease 3.5s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-spin-slow {
+    animation: none;
+  }
+}
