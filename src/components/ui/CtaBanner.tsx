@@ -18,8 +18,8 @@ export default function CtaBanner({ title = "Ready to start your project?" }: { 
             </div>
             <div className="flex flex-wrap gap-3">
               <Button href="/contact">Request a quote</Button>
-              <Button href={site.quotesPhoneHref} variant="ghost" icon={false}>
-                {site.quotesPhone}
+              <Button href={site.phoneHref} variant="ghost" icon={false}>
+                {site.phone}
               </Button>
             </div>
           </div>

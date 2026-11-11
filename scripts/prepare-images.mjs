@@ -8,7 +8,7 @@ const src = "current site image";
 const out = "public/images";
 const webp = (img) => img.webp({ quality: 90 });
 
-for (const dir of ["gallery", "before-after", "team"]) {
+for (const dir of ["gallery", "before-after"]) {
   await mkdir(path.join(out, dir), { recursive: true });
 }
 
@@ -29,12 +29,6 @@ for (let i = 1; i <= 3; i++) {
     );
   }
 }
-
-await webp(sharp(path.join(src, "James ONeill.png"))).toFile(path.join(out, "team", "james.webp"));
-// Trim the neighbouring person's hair off the left edge of Maia's photo.
-await webp(sharp(path.join(src, "Maia ONeill.png")).extract({ left: 90, top: 0, width: 410, height: 560 })).toFile(
-  path.join(out, "team", "maia.webp"),
-);
 
 // Logo: the export is a white mark on a flat light-grey (230) background.
 // Rebuild it as pure white with alpha taken from brightness, so it sits on any colour.

@@ -1,10 +1,10 @@
 import clsx from "clsx";
-import { Award, Building2, Paintbrush, ShieldCheck } from "lucide-react";
+import { Award, Building2, Paintbrush } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { accreditations } from "@/lib/content";
 
-const icons = { dulux: Paintbrush, mbq: Building2, qbcc: ShieldCheck, guarantee: Award };
+const icons = { dulux: Paintbrush, mbq: Building2, guarantee: Award };
 
 export default function Accreditations({ tone = "paper" }: { tone?: "paper" | "bone" }) {
   return (
@@ -14,13 +14,13 @@ export default function Accreditations({ tone = "paper" }: { tone?: "paper" | "b
           eyebrow="Accreditations & awards"
           title={
             <>
-              Licensed, accredited <em className="text-clay-deep">& guaranteed.</em>
+              Accredited <em className="text-clay-deep">& guaranteed.</em>
             </>
           }
-          text="Peace of mind comes standard. Our work is fully licensed, industry accredited and backed by a five-year workmanship guarantee."
+          text="Peace of mind comes standard. Our work is industry accredited and backed by a five-year workmanship guarantee."
         />
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
           {accreditations.map((item, i) => {
             const Icon = icons[item.icon];
             return (

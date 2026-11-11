@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import ContactList from "@/components/contact/ContactList";
-import OfficeMap from "@/components/contact/OfficeMap";
 import QuoteForm from "@/components/contact/QuoteForm";
-import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Request a quote or get in touch with Prime Property Solutions in West End and Loganholme, QLD.",
+  description: "Request a quote or get in touch with MaxOne Solutions in Australia.",
 };
 
 export default function ContactPage() {
@@ -32,14 +30,6 @@ export default function ContactPage() {
             </Reveal>
             <Reveal delay={0.05}>
               <ContactList />
-            </Reveal>
-            <Reveal delay={0.1}>
-              <OfficeMap />
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="text-sm leading-relaxed text-mute">
-                ABN {site.abn} · QBCC {site.qbcc} · NSW {site.nswLicence}
-              </p>
             </Reveal>
           </div>
           <Reveal delay={0.1}>

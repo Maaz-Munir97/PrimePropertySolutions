@@ -9,7 +9,7 @@ export default function Intro() {
     <section className="bg-bone py-24 sm:py-32">
       <div className="container-x">
         <Reveal>
-          <span className="eyebrow text-clay-deep">The Prime difference</span>
+          <span className="eyebrow text-clay-deep">The MaxOne difference</span>
         </Reveal>
         <ScrollText
           text={intro.lead}
@@ -22,7 +22,7 @@ export default function Intro() {
               <p key={p}>{p}</p>
             ))}
             <Button href="/about" variant="dark" className="mt-4">
-              Meet the team
+              About us
             </Button>
           </Reveal>
           <StatsGrid className="grid-cols-2" />

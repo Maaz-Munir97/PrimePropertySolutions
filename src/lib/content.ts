@@ -1,24 +1,16 @@
 /**
  * All site copy and data in one place.
- * Descriptions and bios come from the current Prime Property Solutions website.
+ * Descriptions come from the original concept copy.
  * Gallery captions, the four process steps and the value statements were written
  * for this concept — confirm them with the client before going live.
  */
 
 export const site = {
-  name: "Prime Property Solutions",
-  email: "info@primepropertysolutions.com.au",
-  quotesPhone: "0478 128 271",
-  quotesPhoneHref: "tel:+61478128271",
-  officePhone: "0421 103 832",
-  officePhoneHref: "tel:+61421103832",
-  abn: "67 679 628 623",
-  qbcc: "15474091",
-  nswLicence: "490254C",
-  offices: [
-    { name: "Head office", address: "Loganholme, QLD 4129", map: "Loganholme+QLD+4129" },
-    { name: "Brisbane office", address: "West End, QLD 4101", map: "West+End+QLD+4101" },
-  ],
+  name: "MaxOne Solutions",
+  email: "maxone@info.com",
+  phone: "+1 123 456",
+  phoneHref: "tel:+1123456",
+  offices: [{ name: "Office", address: "Australia" }],
 };
 
 export const nav = [
@@ -31,7 +23,7 @@ export const nav = [
 
 const g = (n: number) => `/images/gallery/g${n}.webp`;
 
-export const heroTrust = ["QBCC Licence 15474091", "Dulux Accredited", "Master Builders Member", "5-Year Guarantee"];
+export const heroTrust = ["Dulux Accredited", "Master Builders Member", "5-Year Guarantee"];
 
 export const sectors = [
   "Residential",
@@ -54,7 +46,7 @@ export const stats = [
   { value: 30, suffix: "+", label: "Years of industry experience" },
   { value: 5, suffix: "", label: "Year workmanship guarantee" },
   { value: 3, suffix: "", label: "Specialist sectors — residential, commercial & insurance" },
-  { value: 2, suffix: "", label: "Offices across South-East Queensland" },
+  { value: 100, suffix: "%", label: "Commitment to every client" },
 ];
 
 export const transformations = [
@@ -174,7 +166,6 @@ export const gallery: GalleryItem[] = [
 export const accreditations = [
   { icon: "dulux", title: "Dulux Accredited", detail: "Accredited painting contractor" },
   { icon: "mbq", title: "Master Builders Member", detail: "Proud member of Master Builders Queensland" },
-  { icon: "qbcc", title: "QBCC Authorised", detail: `QBCC ${site.qbcc} · NSW ${site.nswLicence}` },
   { icon: "guarantee", title: "5 Year Workmanship Guarantee", detail: "Quality you can rely on, long after the reveal" },
 ] as const;
 
@@ -194,36 +185,5 @@ export const values = [
   {
     title: "Lasting quality",
     text: "High-quality workmanship, backed by our 5-year workmanship guarantee.",
-  },
-];
-
-export type TeamMember = {
-  name: string;
-  firstName: string;
-  role: string;
-  image: string;
-  bio: string[];
-};
-
-export const team: TeamMember[] = [
-  {
-    name: "James O’Neill",
-    firstName: "James",
-    role: "Director",
-    image: "/images/team/james.webp",
-    bio: [
-      "James O’Neill, Director of Prime Property Solutions, brings nearly three decades of experience in the industry. With a deep understanding of the Australian and New Zealand property landscape, he is dedicated to delivering high-quality solutions tailored to the needs of residential, commercial, and strata clients.",
-      "Under James's leadership, the company prioritises client satisfaction and integrity, setting new benchmarks for quality and service in the industry. His vision for growth and excellence continues to drive Prime Property Solutions forward.",
-    ],
-  },
-  {
-    name: "Maia O’Neill",
-    firstName: "Maia",
-    role: "Office Manager / Senior Project Coordinator",
-    image: "/images/team/maia.webp",
-    bio: [
-      "Maia O’Neill serves as the Project Coordinator at Prime Property Solutions, expertly managing all project details and serving as the vital link between trades, the project manager, and clients. Her exceptional organisational skills and proactive communication ensure seamless project execution.",
-      "Passionate about delivering outstanding service, Maia is committed to upholding the high standards of quality that Prime Property Solutions is known for, making her an invaluable asset to the team.",
-    ],
   },
 ];

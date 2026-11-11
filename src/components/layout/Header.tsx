@@ -84,11 +84,11 @@ export default function Header() {
 
           <div className="flex items-center gap-3">
             <a
-              href={site.quotesPhoneHref}
+              href={site.phoneHref}
               className="hidden items-center gap-2 text-sm text-bone/70 transition-colors hover:text-clay-soft xl:flex"
             >
               <PhoneCall className="size-4" aria-hidden />
-              {site.quotesPhone}
+              {site.phone}
             </a>
             <Link
               href="/contact"
@@ -165,13 +165,13 @@ export default function Header() {
                 Request a quote
               </Button>
               <div className="grid grid-cols-2 gap-4 text-sm">
-                <a href={site.quotesPhoneHref} className="text-bone">
-                  <span className="block text-xs tracking-[0.18em] text-bone/45 uppercase">Quotes</span>
-                  {site.quotesPhone}
+                <a href={site.phoneHref} className="text-bone">
+                  <span className="block text-xs tracking-[0.18em] text-bone/45 uppercase">Phone</span>
+                  {site.phone}
                 </a>
-                <a href={site.officePhoneHref} className="text-bone">
-                  <span className="block text-xs tracking-[0.18em] text-bone/45 uppercase">Office</span>
-                  {site.officePhone}
+                <a href={`mailto:${site.email}`} className="break-all text-bone">
+                  <span className="block text-xs tracking-[0.18em] text-bone/45 uppercase">Email</span>
+                  {site.email}
                 </a>
               </div>
             </motion.div>

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Over 30 years of experience across residential, commercial, strata and insurance projects in South-East Queensland. Clear communication and transparency from first consultation to final reveal.",
+    "Over 30 years of experience across residential, commercial, strata and insurance projects across Australia. Clear communication and transparency from first consultation to final reveal.",
   // Concept redesign — keep it out of search results so it never competes with the real site.
   robots: { index: false, follow: false },
 };

@@ -5,7 +5,6 @@ import ServicesStack from "@/components/home/ServicesStack";
 import Transformations from "@/components/home/Transformations";
 import Process from "@/components/home/Process";
 import GalleryStrip from "@/components/home/GalleryStrip";
-import TeamTeaser from "@/components/home/TeamTeaser";
 import Accreditations from "@/components/home/Accreditations";
 import QuoteSection from "@/components/contact/QuoteSection";
 
@@ -19,7 +18,6 @@ export default function HomePage() {
       <Transformations />
       <Process />
       <GalleryStrip />
-      <TeamTeaser />
       <Accreditations />
       <QuoteSection />
     </>

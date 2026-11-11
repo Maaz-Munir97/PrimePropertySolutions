@@ -6,7 +6,7 @@ import Transformations from "@/components/home/Transformations";
 
 export const metadata: Metadata = {
   title: "Gallery",
-  description: "Browse residential, commercial and strata projects completed by Prime Property Solutions.",
+  description: "Browse residential, commercial and strata projects completed by MaxOne Solutions.",
 };
 
 export default function GalleryPage() {

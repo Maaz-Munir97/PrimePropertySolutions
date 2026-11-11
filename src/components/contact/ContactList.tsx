@@ -1,10 +1,9 @@
 import clsx from "clsx";
-import { ArrowUpRight, Mail, Phone, PhoneCall } from "lucide-react";
+import { ArrowUpRight, Mail, PhoneCall } from "lucide-react";
 import { site } from "@/lib/content";
 
 const items = [
-  { icon: PhoneCall, label: "Quotes", value: site.quotesPhone, href: site.quotesPhoneHref },
-  { icon: Phone, label: "Office", value: site.officePhone, href: site.officePhoneHref },
+  { icon: PhoneCall, label: "Phone", value: site.phone, href: site.phoneHref },
   { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
 ];
 

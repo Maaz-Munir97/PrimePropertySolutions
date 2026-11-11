@@ -33,7 +33,7 @@ export default function Preloader({ onFinish }: { onFinish: () => void }) {
             transition={{ duration: 0.9, delay: 0.45, ease }}
             className="pl-[0.35em] font-display text-4xl tracking-[0.35em] text-bone"
           >
-            PRIME
+            MAXONE
           </motion.p>
         </div>
         <motion.span

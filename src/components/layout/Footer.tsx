@@ -70,15 +70,9 @@ export default function Footer() {
 
           <FooterColumn title="Contact">
             <li>
-              <span className="text-bone/45">Quotes </span>
-              <a href={site.quotesPhoneHref} className={linkClass}>
-                {site.quotesPhone}
-              </a>
-            </li>
-            <li>
-              <span className="text-bone/45">Office </span>
-              <a href={site.officePhoneHref} className={linkClass}>
-                {site.officePhone}
+              <span className="text-bone/45">Phone </span>
+              <a href={site.phoneHref} className={linkClass}>
+                {site.phone}
               </a>
             </li>
             <li>
@@ -97,7 +91,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 border-t border-bone/10 py-8 text-xs text-bone/45 lg:flex-row lg:items-center lg:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.name} · ABN {site.abn} · QBCC {site.qbcc} · NSW {site.nswLicence}
+            © {new Date().getFullYear()} {site.name}
           </p>
           <p>Concept redesign — not the official website</p>
         </div>
@@ -107,7 +101,7 @@ export default function Footer() {
         aria-hidden
         className="pointer-events-none -mb-[0.12em] select-none text-center font-display text-[30vw] leading-[0.8] text-bone/[0.035]"
       >
-        PRIME
+        MAXONE
       </p>
     </footer>
   );

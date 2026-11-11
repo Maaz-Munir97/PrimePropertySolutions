@@ -6,7 +6,7 @@ export default function Logo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
-      aria-label="Prime Property Solutions — home"
+      aria-label="MaxOne Solutions — home"
       className={clsx("group flex items-center gap-3 text-bone", className)}
     >
       <Image
@@ -18,9 +18,9 @@ export default function Logo({ className }: { className?: string }) {
         className="h-11 w-auto transition-transform duration-700 ease-luxe group-hover:-translate-y-0.5"
       />
       <span className="leading-none">
-        <span className="block font-display text-[1.65rem] tracking-[0.14em]">PRIME</span>
+        <span className="block font-display text-[1.65rem] tracking-[0.14em]">MAXONE</span>
         <span className="mt-1 block text-[0.56rem] font-medium tracking-[0.3em] text-bone/60 uppercase">
-          Property Solutions
+          Solutions
         </span>
       </span>
     </Link>

@@ -25,7 +25,7 @@ function Band({ className, reverse }: { className: string; reverse?: boolean }) 
   );
 }
 
-/** Two crossing ribbons of the sectors Prime works in. */
+/** Two crossing ribbons of the sectors MaxOne works in. */
 export default function SectorMarquee() {
   return (
     <section aria-label="Sectors we work in" className="relative h-52 overflow-hidden bg-bone sm:h-64">

@@ -26,8 +26,8 @@ export default function IntroProvider({ children }: { children: React.ReactNode 
   useEffect(() => {
     let seen = false;
     try {
-      seen = sessionStorage.getItem("prime-intro") === "1";
-      sessionStorage.setItem("prime-intro", "1");
+      seen = sessionStorage.getItem("maxone-intro") === "1";
+      sessionStorage.setItem("maxone-intro", "1");
     } catch {}
 
     if (seen || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

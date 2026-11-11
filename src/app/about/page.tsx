@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
-import clsx from "clsx";
 import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import ScrollText from "@/components/ui/ScrollText";
 import SectionHeading from "@/components/ui/SectionHeading";
 import StatsGrid from "@/components/ui/StatsGrid";
 import CtaBanner from "@/components/ui/CtaBanner";
-import TeamPortrait from "@/components/about/TeamPortrait";
 import Accreditations from "@/components/home/Accreditations";
-import { intro, team, values } from "@/lib/content";
+import { intro, values } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Meet James and Maia O’Neill and the team behind Prime Property Solutions.",
+  description: "About MaxOne Solutions — residential, commercial, strata and insurance property solutions.",
 };
 
 export default function AboutPage() {
@@ -78,39 +76,6 @@ export default function AboutPage() {
                   className="absolute bottom-0 left-0 h-0.5 w-0 bg-clay transition-all duration-700 ease-luxe group-hover:w-full"
                 />
               </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section id="team" className="scroll-mt-20 bg-paper py-24 sm:py-32">
-        <div className="container-x">
-          <SectionHeading
-            eyebrow="Meet the team"
-            title={
-              <>
-                The people <em className="text-clay-deep">behind Prime.</em>
-              </>
-            }
-            text="Experienced leadership and meticulous coordination — so every project runs smoothly from start to finish."
-          />
-          <div className="mt-16 space-y-24 sm:space-y-32 lg:mt-24">
-            {team.map((member, i) => (
-              <article key={member.name} className="grid items-center gap-10 lg:grid-cols-2 lg:gap-24">
-                <TeamPortrait member={member} className={clsx(i % 2 === 1 && "lg:order-2")} />
-                <div>
-                  <Reveal>
-                    <span className="eyebrow text-clay-deep">{member.role}</span>
-                    <h3 className="mt-6 font-display text-5xl leading-none sm:text-7xl">{member.name}</h3>
-                  </Reveal>
-                  <Reveal delay={0.1} className="mt-8 space-y-5 text-lg leading-relaxed text-mute">
-                    {member.bio.map((p) => (
-                      <p key={p}>{p}</p>
-                    ))}
-                  </Reveal>
-                </div>
-              </article>
             ))}
           </div>
         </div>

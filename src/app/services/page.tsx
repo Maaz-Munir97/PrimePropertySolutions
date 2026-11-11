@@ -10,7 +10,7 @@ import { services, site, transformations } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Commercial & strata, residential and insurance repair services from Prime Property Solutions.",
+  description: "Commercial & strata, residential and insurance repair services from MaxOne Solutions.",
 };
 
 export default function ServicesPage() {
@@ -55,8 +55,8 @@ export default function ServicesPage() {
                     <Button href="/contact" variant="dark">
                       Request a quote
                     </Button>
-                    <Button href={site.quotesPhoneHref} variant="ghost-dark" icon={false}>
-                      Call {site.quotesPhone}
+                    <Button href={site.phoneHref} variant="ghost-dark" icon={false}>
+                      Call {site.phone}
                     </Button>
                   </div>
                 </Reveal>
